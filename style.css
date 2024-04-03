@@ -159,9 +159,15 @@ nav {
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
   .mid-nav {
-    display: none; /* Hide mid-nav on smaller screens */
+    font-size: small; /* Hide mid-nav on smaller screens */
   }
-
+  .heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 40px; /* Add margin to the bottom of the heading */
+  }
   .r1 {
     display: flex;
     flex-wrap: wrap; /* Allow <p> elements to wrap */
@@ -226,6 +232,6 @@ nav {
     padding: 0 5px; /* Add padding to each image container */
   }
   .last-page {
-    padding: 10px 30px 10px 60px; /* Add padding to the left and right sides */
+    padding: 10px 20px 10px 40px; /* Add padding to the left and right sides */
   }
 }
