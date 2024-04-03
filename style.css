@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  overflow: hidden; /* Ensure the image does not overflow the container */
+}
+
+.container img {
+  width: 100%;
+  height: 100%; /* Fill the container height */
+  display: block;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+.hr {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(194, 194, 194);
+}
+
+.hr > div {
+  padding: 2rem 3rem 2rem 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  flex: 1;
+  font-size: large;
+  margin: 0 10px;
+}
+
+.text {
+  position: absolute;
+  bottom: 50px; /* Adjust as needed */
+  left: 50px; /* Adjust as needed */
+  padding: 10px; /* Adjust padding */
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    80deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(145, 145, 145, 1) 96%
+  ); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  align-items: center;
+  width: 20rem;
+  height: 4rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Your existing styles and media queries below */
+.main {
+  width: 100vw;
+  height: 13vh;
+  background-color: white;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Add padding to the sides for better spacing */
+}
+
+.mid-nav {
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.mid-nav p {
+  margin-right: 25px; /* Add margin between <p> elements */
+}
+
+.end-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.end-nav i {
+  height: 40px;
+  width: 40px;
+  margin-right: 1rem;
+}
+
+.last-page {
+  padding: 20px 40px 20px 110px;
+  background-color: #dad6df;
+  gap: 0; /* Add padding to the left and right sides */
+}
+
+.heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 40px; /* Add margin to the bottom of the heading */
+}
+
+.hotel-pic {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  margin: 0 -10px;
+  font-family: Arial, Helvetica, sans-serif; /* Add negative margin to counteract padding */
+}
+
+.hotel-pic > div {
+  flex: 1; /* Each image container takes up equal space */
+  margin: 0 10px; /* Add margin between images */
+}
+
+.hotel-pic img {
+  width: 100%; /* Ensure images take up full width of container */
+  max-width: 20rem; /* Set maximum width for the images */
+  height: auto;
+}
+
+.hotel-text1 {
+  margin-top: 1.5rem;
+  text-align: start;
+  width: 100%; /* Ensure images take up full width of container */
+  max-width: 20rem;
+  /* Center align text */
+}
+.hotel-text2 {
+  margin-top: 1.5rem;
+  text-align: center;
+  width: 100%; /* Ensure images take up full width of container */
+  max-width: 20rem;
+}
+.hotel-text3 {
+  margin-top: 1.5rem;
+  text-align: end;
+  width: 100%; /* Ensure images take up full width of container */
+  max-width: 20rem;
+}
+
+.btn {
+  background-color: rgb(14, 14, 14);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 10rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .mid-nav {
+    display: none; /* Hide mid-nav on smaller screens */
+  }
+
+  .r1 {
+    display: flex;
+    flex-wrap: wrap; /* Allow <p> elements to wrap */
+    justify-content: center; /* Center align <p> elements */
+    margin-top: 10px; /* Add space between mid-nav and end-nav on smaller screens */
+  }
+
+  nav {
+    justify-content: flex-end; /* Move end-nav to the end on smaller screens */
+  }
+  .hr {
+    flex-direction: column;
+  }
+
+  .hr > div {
+    flex: 1;
+    margin: 10px 0;
+  }
+  .hotel-pic {
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+  }
+  .hotel-pic > div {
+    margin: 10px 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mid-nav,
+  .end-nav {
+    display: none; /* Display mid-nav and end-nav again */
+    flex-direction: column;
+    align-items: center;
+  }
+  .hr > div {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: small;
+  }
+  .text {
+    width: 10rem;
+    height: 2rem;
+    padding-top: 0.5rem;
+    font-weight: bold;
+    font-size: x-small;
+  }
+  .mid-nav p {
+    margin-right: 0; /* Remove margin between <p> elements */
+    margin-bottom: 10px; /* Add space between <p> elements */
+    font-size: large; /* Adjust font size for better readability on smaller screens */
+  }
+
+  nav {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    height: auto; /* Adjust nav height to accommodate stacked items */
+    padding: 10px; /* Reduce padding for smaller screens */
+    justify-content: center; /* Center align items vertically */
+  }
+
+  .hotel-pic > div {
+    margin: 10px 0; /* Adjust margin for spacing */
+    padding: 0 5px; /* Add padding to each image container */
+  }
+  .last-page {
+    padding: 10px 30px 10px 60px; /* Add padding to the left and right sides */
+  }
+}
